@@ -2,6 +2,9 @@ import React, { useEffect, useState } from 'react';
 import { FlatList, Text, View, StyleSheet, SafeAreaView } from 'react-native';
 import ListItem from './components/ListItem'; 
 import  {SAMPLE_DATA} from './assets/data/sampleData';
+import BottomSheet from '@gorhom/bottom-sheet';
+// import BottomSheetModal from '@gorhom/bottom-sheet';
+// import { BottomSheetModal } from '@gorhom/bottom-sheet';
 
 const ListHeader = () => (
   <>
@@ -16,7 +19,13 @@ export default App = () => {
   const [isLoading, setLoading] = useState(true);
   const [data, setData] = useState([]);
 
-
+  // useEffect(() => {
+  //   fetch('https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=20&page=1&sparkline=true&price_change_percentage=7d')
+  //     .then((response) => response.json())
+  //     .then((data) => setData(data))
+  //     .catch((error) => console.error(error))
+  //     .finally(() => setLoading(false));
+  // }, []);
   return (
   <SafeAreaView style={styles.container}>
     
